@@ -1,0 +1,29 @@
+﻿<local:MainViewModel
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:DrawPokerBasic" 
+    SampleProperty="Sample Text Property Value">
+
+    <local:MainViewModel.Items>
+        <local:ItemViewModel LineOne="Four of Kind or better" LineTwo="Even if you have King high royal flush, hold on to them and take the payout!" />
+        <local:ItemViewModel LineOne="4 to a Royal Flush" LineTwo="One card away from Jackpot!" />
+        <local:ItemViewModel LineOne="2 Pair or better" LineTwo="Keep natural flushes and straights and don't split a pair." />
+        <local:ItemViewModel LineOne="4 to a Straight Flush" LineTwo="You can win with flush, straight, and straight flush." />
+        <local:ItemViewModel LineOne="High pair" LineTwo="Keep the high pair to at least win your bet back." />
+        <local:ItemViewModel LineOne="3 to Royal Flush" LineThree="" LineTwo="This includes the 10 if it matches suit." />
+    </local:MainViewModel.Items>
+<!-- 
+                <ListBoxItem Content="High pair"/>
+                <ListBoxItem Content="3 to a Royal Flush"/>
+                <ListBoxItem Content="4 to a Flush"/>
+                <ListBoxItem Content="Low pair"/>
+                <ListBoxItem Content="Open ended Straight"/>
+                <ListBoxItem Content="AKQJ"/>
+                <ListBoxItem Content="2 suited high cards"/>
+                <ListBoxItem Content="3 to a Straight Flush"/>
+                <ListBoxItem Content="KQJ"/>
+                <ListBoxItem Content="2 high cards"/>
+                <ListBoxItem Content="1 high card"/>
+    
+    -->
+</local:MainViewModel>

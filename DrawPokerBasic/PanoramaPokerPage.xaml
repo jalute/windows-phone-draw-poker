@@ -1,0 +1,218 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="DrawPokerBasic.PanoramaPokerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:DrawPokerBasic" xmlns:my1="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <phone:PhoneApplicationPage.Resources>
+        <Style x:Key="btnAboutTemplate" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Rectangle x:Name="btnTest" Fill="#00000000" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="3"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="About"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </phone:PhoneApplicationPage.Resources>
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    
+    <Grid x:Name="LayoutRoot">
+        <StackPanel Name="spSplashScreen" Visibility="Collapsed">
+            <Image x:Name="imageSplashScreen" Source="/DrawPokerBasic;component/SplashScreenImage.jpg" Stretch="Fill" />
+        </StackPanel>
+        <controls:Panorama Visibility="Visible" Name="panoromaMain" >
+        	<controls:Panorama.Title>
+                <StackPanel Orientation="Horizontal" Margin="0,80,0,0">
+                    <TextBlock Text="Jacks or Better Poker" FontSize="{StaticResource PhoneFontSizeExtraExtraLarge}" FontStyle="Normal"/>
+                </StackPanel>
+            </controls:Panorama.Title>
+
+            <controls:PanoramaItem Header="Learn">
+                <Grid x:Name="grdLearn" Grid.Row="2" Margin="12,0,12,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition x:Name="rowPokerDesc" Height="194"></RowDefinition>
+                        <RowDefinition x:Name="rowLearnHands" Height="304"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="txtPokerDesc" TextWrapping="Wrap" Grid.Row="0"><Run Text="The essence of Poker is to create the best hand from five cards.  In Draw Poker, after an initial set of cards, you can discard some or all of your cards to draw new cards to build a better hand.  Jacks or Better Poker is when a pair of Jacks or better pays. Below is a list of Poker hands from best to worse:"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+                    <ListBox x:Name="lstLearnHands" Grid.Row="1" Margin="0,0,6,6" ItemsSource="{Binding}" SelectionChanged="Strategy_SelectionChanged" Background="#18000000" VirtualizingStackPanel.VirtualizationMode="Standard" >
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Margin="0,0,0,3" Width="Auto" Height="Auto">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="6,0,0,6">
+                                            <Border BorderBrush="Black" BorderThickness="1" Background="Ivory" CornerRadius="3">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding CardValue1}" Foreground="{Binding CardColor1}" Margin="2,0,0,0" />
+                                                    <TextBlock Text="{Binding CardSuit1}" Foreground="{Binding CardColor1}" FontSize="28" FontFamily="Verdana"  VerticalAlignment="Bottom" Margin="0,6,0,0" />
+                                                </StackPanel>
+                                            </Border>
+                                            <Border BorderBrush="Black" BorderThickness="1" Background="Ivory" CornerRadius="3">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding CardValue2}" Foreground="{Binding CardColor2}" Margin="2,0,0,0" />
+                                                    <TextBlock Text="{Binding CardSuit2}" Foreground="{Binding CardColor2}" FontSize="28" FontFamily="Verdana"  VerticalAlignment="Bottom"/>
+                                                </StackPanel>
+                                            </Border>
+                                            <Border BorderBrush="Black" BorderThickness="1" Background="Ivory" CornerRadius="3">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding CardValue3}" Foreground="{Binding CardColor3}" Margin="2,0,0,0" />
+                                                    <TextBlock Text="{Binding CardSuit3}" Foreground="{Binding CardColor3}" FontSize="28" FontFamily="Verdana"  VerticalAlignment="Bottom" />
+                                                </StackPanel>
+                                            </Border>
+                                            <Border BorderBrush="Black" BorderThickness="1" Background="Ivory" CornerRadius="3">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding CardValue4}" Foreground="{Binding CardColor4}" Margin="2,0,0,0" />
+                                                    <TextBlock Text="{Binding CardSuit4}" Foreground="{Binding CardColor4}" FontSize="28" FontFamily="Verdana"  VerticalAlignment="Bottom" />
+                                                </StackPanel>
+                                            </Border>
+                                            <Border BorderBrush="Black" BorderThickness="1" Background="Ivory" CornerRadius="3">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding CardValue5}" Foreground="{Binding CardColor5}" Margin="2,0,0,0" />
+                                                    <TextBlock Text="{Binding CardSuit5}" Foreground="{Binding CardColor5}" FontSize="28" FontFamily="Verdana"  VerticalAlignment="Bottom" />
+                                                </StackPanel>
+                                            </Border>
+                                            <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}" />
+                                    </StackPanel>
+                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="Hold strategy">
+                <Grid x:Name="grdStrategy" Grid.Row="1" Margin="12,0,12,0">
+                    <ListBox x:Name="lstStrategy" Margin="0,0,6,6" ItemsSource="{Binding}" Background="#18000000" SelectionChanged="Strategy_SelectionChanged" VirtualizingStackPanel.VirtualizationMode="Standard" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,3" Width="Auto" Height="Auto">
+                                    <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"/>
+
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="12,0,0,6">
+                                        <Border BorderBrush="Black" BorderThickness="1" Background="Ivory" CornerRadius="3">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding CardValue1}" Foreground="{Binding CardColor1}" Margin="2,0,0,0" />
+                                                <TextBlock Text="{Binding CardSuit1}" Foreground="{Binding CardColor1}" FontSize="28" FontFamily="Verdana"  VerticalAlignment="Bottom" Margin="0,6,0,0" />
+                                            </StackPanel>
+                                        </Border>
+                                        <Border BorderBrush="Black" BorderThickness="1" Background="Ivory" CornerRadius="3">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding CardValue2}" Foreground="{Binding CardColor2}" Margin="2,0,0,0" />
+                                                <TextBlock Text="{Binding CardSuit2}" Foreground="{Binding CardColor2}" FontSize="28" FontFamily="Verdana"  VerticalAlignment="Bottom"/>
+                                            </StackPanel>
+                                        </Border>
+                                        <Border BorderBrush="Black" BorderThickness="1" Background="Ivory" CornerRadius="3">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding CardValue3}" Foreground="{Binding CardColor3}" Margin="2,0,0,0" />
+                                                <TextBlock Text="{Binding CardSuit3}" Foreground="{Binding CardColor3}" FontSize="28" FontFamily="Verdana"  VerticalAlignment="Bottom" />
+                                            </StackPanel>
+                                        </Border>
+                                        <Border BorderBrush="Black" BorderThickness="1" Background="Ivory" CornerRadius="3">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding CardValue4}" Foreground="{Binding CardColor4}" Margin="2,0,0,0" />
+                                                <TextBlock Text="{Binding CardSuit4}" Foreground="{Binding CardColor4}" FontSize="28" FontFamily="Verdana"  VerticalAlignment="Bottom" />
+                                            </StackPanel>
+                                        </Border>
+                                        <Border BorderBrush="Black" BorderThickness="1" Background="Ivory" CornerRadius="3">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding CardValue5}" Foreground="{Binding CardColor5}" Margin="2,0,0,0" />
+                                                <TextBlock Text="{Binding CardSuit5}" Foreground="{Binding CardColor5}" FontSize="28" FontFamily="Verdana"  VerticalAlignment="Bottom" />
+                                            </StackPanel>
+                                        </Border>
+                                    </StackPanel>
+                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama item one-->
+            <controls:PanoramaItem Header="Play">
+                <Grid x:Name="PlayPanel" Margin="6,0,8,86" Background="Transparent" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.101,0.878">
+                    <Rectangle Fill="#18000000" Stroke="#FF3B3838" Height="271" VerticalAlignment="Bottom" RadiusX="2" RadiusY="2" Margin="-6,0,6,30" />
+                    <Canvas HorizontalAlignment="Left" Height="78" Margin="30,8,0,0" VerticalAlignment="Top" Width="131" d:LayoutOverrides="VerticalAlignment">
+                        <Rectangle Stroke="#FF3B3838" Width="131" Height="78" RadiusY="2" RadiusX="2"/>
+                        <TextBlock Height="30" x:Name="textBlock7" Text="Credits" FontSize="24" d:LayoutOverrides="GridBox" TextDecorations="Underline" Canvas.Left="28" />
+                        <TextBlock Height="Auto" HorizontalAlignment="Left" x:Name="txtCredits" Text="999999" VerticalAlignment="Top" FontSize="36" d:LayoutOverrides="GridBox" Width="128" TextAlignment="Center" Canvas.Left="2" Canvas.Top="30" />
+                    </Canvas>
+                    <Button Content="Deal" Height="102" HorizontalAlignment="Left" Margin="236,389,0,0" x:Name="btnDeal" VerticalAlignment="Top" Width="176" Click="btnDeal_Click" d:LayoutOverrides="GridBox" FontSize="29.333" FontFamily="Segoe WP Semibold" FontWeight="Bold" BorderThickness="3,3,6,6" />
+                    <Button Content="Bet +" Height="81" Margin="103,401,0,0" x:Name="btnBet" VerticalAlignment="Top" Click="btnBet_Click" d:LayoutOverrides="HorizontalAlignment, GridBox" HorizontalAlignment="Left" Width="147" FontSize="24" BorderThickness="1,1,3,3" />
+                    <Button Height="81" Margin="13,393,306,0" x:Name="btnMultiplier" VerticalAlignment="Top" Click="btnMultiplier_Click" FontSize="24" BorderThickness="0" >
+                        <Button.Content>
+                            <Image Source="/DrawPokerBasic;component/Images/PokerChip1.png" Margin="0" RenderTransformOrigin="1.657,0.238" Height="44" Width="50" />
+                        </Button.Content>
+                    </Button>
+                    <Button Content="Hint" Height="61" HorizontalAlignment="Left" Margin="34,145,0,0" x:Name="btnHint" VerticalAlignment="Top" Width="103" FontSize="22" d:LayoutOverrides="VerticalAlignment" Visibility="Collapsed" />
+                    <Viewbox Height="149" Margin="9,0,8,101" VerticalAlignment="Bottom">
+                        <Grid Height="149" Width="439">
+                            <TextBlock Height="30" Margin="14,0,0,0" x:Name="textBlock1" Text="HOLD" VerticalAlignment="Top" Foreground="{StaticResource PhoneContrastBackgroundBrush}" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" />
+                            <TextBlock Height="30" HorizontalAlignment="Left" Margin="105,0,0,0" x:Name="textBlock2" Text="HOLD" VerticalAlignment="Top" Foreground="{StaticResource PhoneContrastBackgroundBrush}" d:LayoutOverrides="VerticalAlignment, GridBox" />
+                            <TextBlock Height="30" HorizontalAlignment="Left" Margin="193,0,0,0" x:Name="textBlock3" Text="HOLD" VerticalAlignment="Top" Foreground="{StaticResource PhoneContrastBackgroundBrush}" d:LayoutOverrides="VerticalAlignment, GridBox" />
+                            <TextBlock Height="30" HorizontalAlignment="Left" Margin="281,0,0,0" x:Name="textBlock4" Text="HOLD" VerticalAlignment="Top" Foreground="{StaticResource PhoneContrastBackgroundBrush}" d:LayoutOverrides="VerticalAlignment, GridBox" />
+                            <TextBlock Height="30" HorizontalAlignment="Left" Margin="369,0,0,0" x:Name="textBlock5" Text="HOLD" VerticalAlignment="Top" Foreground="{StaticResource PhoneContrastBackgroundBrush}" d:LayoutOverrides="VerticalAlignment, GridBox" />
+                            <my:ucCard Margin="0,25,0,0" x:Name="ucCard1" VerticalAlignment="Top" Click="ucCard1_Click" Height="124" HorizontalAlignment="Left" Width="83" />
+                            <my:ucCard HorizontalAlignment="Left" Margin="89,25,0,0" x:Name="ucCard2" VerticalAlignment="Top" Click="ucCard2_Click" Width="83" Height="124" d:LayoutOverrides="GridBox" />
+                            <my:ucCard Margin="178,25,178,0" x:Name="ucCard3" VerticalAlignment="Top" Click="ucCard3_Click" Height="124" d:LayoutOverrides="GridBox" />
+                            <my:ucCard HorizontalAlignment="Left" Margin="267,25,0,0" x:Name="ucCard4" VerticalAlignment="Top" Click="ucCard4_Click" Width="83" Height="124" d:LayoutOverrides="GridBox" />
+                            <my:ucCard HorizontalAlignment="Left" Margin="356,25,0,0" x:Name="ucCard5" VerticalAlignment="Top" Click="ucCard5_Click" Width="83" Height="124" d:LayoutOverrides="GridBox" />
+                            <Rectangle x:Name="rectPayout" Fill="#7F000000" Margin="0,25,-4,0" Stroke="#FF3B3838"/>
+                            <TextBlock Height="66" HorizontalAlignment="Right" Margin="0,75,0,0" x:Name="txtPayout" Text="You win 10000!" VerticalAlignment="Top" FontSize="48" d:LayoutOverrides="GridBox" Foreground="#FFFFDE00" FontWeight="Bold" Width="436" TextAlignment="Center" />
+                        </Grid>
+                    </Viewbox>
+                    <TextBlock Height="43" Margin="45,88,0,0" x:Name="lblBet" Text="Bet" VerticalAlignment="Top" FontSize="28" TextAlignment="Left" TextDecorations="Underline" RenderTransformOrigin="0.606,-0.15" FontWeight="Normal" FontFamily="Segoe WP Semibold" HorizontalAlignment="Left" Width="48" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" />
+                    <TextBlock Height="Auto" Margin="0,84,245,0" x:Name="txtBetAmount" Text="5" VerticalAlignment="Top" FontSize="32" RenderTransformOrigin="4.692,0.5" d:LayoutOverrides="VerticalAlignment, GridBox" TextAlignment="Center" HorizontalAlignment="Right" Width="68" FontWeight="Normal" FontFamily="Segoe WP Semibold" />
+                    <TextBlock x:Name="txtWin" Height="31" Margin="0,198,14,0" TextWrapping="Wrap" Text="Royal Flush" VerticalAlignment="Top" FontFamily="Segoe WP Bold" Foreground="Gold" FontSize="28" FontWeight="ExtraBold" FontStretch="Normal" TextAlignment="Center" d:LayoutOverrides="VerticalAlignment" />
+                    <TextBlock x:Name="txtLose" Margin="-2,202,16,0" Text="You Lose" VerticalAlignment="Top" Style="{StaticResource PhoneTextAccentStyle}" Foreground="{StaticResource PhoneForegroundBrush}" TextAlignment="Center" d:LayoutOverrides="VerticalAlignment" />
+                    <ListBox x:Name="lstPayouts" HorizontalAlignment="Right" Height="140" Margin="0,31,0,0" VerticalAlignment="Top" Width="225" ItemsSource="{Binding}" FontSize="22" BorderBrush="#FF3B3B3B" BorderThickness="1,1,3,3" d:LayoutOverrides="VerticalAlignment">
+                        <ListBox.Foreground>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ListBox.Foreground>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Hand}" Margin="2,0" Width="145" />
+                                    <TextBlock Text="{Binding Payout}" Margin="2,0" TextAlignment="Right" Width="70" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <TextBlock Height="30" Margin="181,-3,0,0" x:Name="textBlock10" Text="Pay Table" VerticalAlignment="Top" HorizontalAlignment="Left" Width="223" TextAlignment="Center" FontStretch="Normal" FontSize="22"/>
+                    <Path Data="M28,34 L89,34" Height="5" Margin="181,22,0,0" Stretch="Fill" Stroke="White" UseLayoutRounding="False" VerticalAlignment="Top" HorizontalAlignment="Left" Width="223" d:LayoutOverrides="GridBox" />
+                </Grid>
+
+            </controls:PanoramaItem>
+
+            <!--Panorama item two-->
+            <controls:PanoramaItem Header="Options">
+                <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                    <CheckBox Content="Sound" Height="99" HorizontalAlignment="Left" Margin="94,34,0,0" Name="chkSoundOn" VerticalAlignment="Top" FontSize="{StaticResource PhoneFontSizeLarge}" Width="202" />
+                    <Button Content="About" Height="48" Margin="89,0,90,42" Name="btnAbout" Style="{StaticResource btnAboutTemplate}" VerticalAlignment="Bottom" Width="217" Click="btnAbout_Click" />
+                    <CheckBox Content="Big Font" Height="97" HorizontalAlignment="Left" Margin="93,129,0,0" Name="chkBigFont" VerticalAlignment="Top" Width="201" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                </Grid>
+            </controls:PanoramaItem>
+            
+        </controls:Panorama>
+    </Grid>
+
+    <!--Panorama-based applications should not show an ApplicationBar-->
+
+</phone:PhoneApplicationPage>

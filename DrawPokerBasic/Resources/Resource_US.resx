@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAbout" xml:space="preserve">
+    <value>About</value>
+    <comment>About button</comment>
+  </data>
+  <data name="btnBet" xml:space="preserve">
+    <value>Bet</value>
+    <comment>Bet button</comment>
+  </data>
+  <data name="btnDeal" xml:space="preserve">
+    <value>Deal</value>
+    <comment>Deal button</comment>
+  </data>
+  <data name="btnDraw" xml:space="preserve">
+    <value>Draw</value>
+    <comment>Draw button</comment>
+  </data>
+  <data name="btnOptions" xml:space="preserve">
+    <value>Options</value>
+    <comment>Option button</comment>
+  </data>
+  <data name="btnPlay" xml:space="preserve">
+    <value>Play!</value>
+    <comment>Play button</comment>
+  </data>
+  <data name="btnStrategy" xml:space="preserve">
+    <value>Strategy</value>
+    <comment>Strategy button</comment>
+  </data>
+  <data name="HoldComment" xml:space="preserve">
+    <value>HOLD</value>
+    <comment>what is displayed when the user wants to HOLD a card</comment>
+  </data>
+  <data name="lblCredits" xml:space="preserve">
+    <value>Credits</value>
+    <comment>Appears above your credits</comment>
+  </data>
+  <data name="lblPayTable" xml:space="preserve">
+    <value>Pay Table</value>
+    <comment>Appears above the Pay Table</comment>
+  </data>
+  <data name="lblSound" xml:space="preserve">
+    <value>Sound?</value>
+    <comment>Sound option</comment>
+  </data>
+  <data name="LoseComment" xml:space="preserve">
+    <value>You lose</value>
+    <comment>Comment that appears when you lose</comment>
+  </data>
+  <data name="payHand1" xml:space="preserve">
+    <value>Royal Flush</value>
+    <comment>Payout hands</comment>
+  </data>
+  <data name="payHand2" xml:space="preserve">
+    <value>Straight Flush</value>
+  </data>
+  <data name="payHand3" xml:space="preserve">
+    <value>Four of Kind</value>
+  </data>
+  <data name="payHand4" xml:space="preserve">
+    <value>Full House</value>
+  </data>
+  <data name="payHand5" xml:space="preserve">
+    <value>Flush</value>
+  </data>
+  <data name="payHand6" xml:space="preserve">
+    <value>Straight</value>
+  </data>
+  <data name="payHand7" xml:space="preserve">
+    <value>Three of a Kind</value>
+  </data>
+  <data name="payHand8" xml:space="preserve">
+    <value>Two Pair</value>
+  </data>
+  <data name="payHand9" xml:space="preserve">
+    <value>Jacks or Better</value>
+  </data>
+  <data name="WinComment" xml:space="preserve">
+    <value>You win</value>
+    <comment>Comment that appears when you win a bet</comment>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Video Poker Basic</value>
+  </data>
+  <data name="LineOne_01" xml:space="preserve">
+    <value>Straight Flush</value>
+  </data>
+  <data name="LineOne_02" xml:space="preserve">
+    <value>Four of Kind</value>
+  </data>
+  <data name="LineOne_03" xml:space="preserve">
+    <value>4 to a Royal Flush</value>
+  </data>
+  <data name="LineOne_04" xml:space="preserve">
+    <value>2 Pair or better</value>
+  </data>
+  <data name="LineOne_05" xml:space="preserve">
+    <value>4  to a Straight Flush</value>
+  </data>
+  <data name="LineOne_06" xml:space="preserve">
+    <value>High Pair</value>
+  </data>
+  <data name="LineOne_07" xml:space="preserve">
+    <value>3 to a Royal Flush</value>
+  </data>
+  <data name="LineOne_08" xml:space="preserve">
+    <value>4 to a Flush</value>
+  </data>
+  <data name="LineOne_09" xml:space="preserve">
+    <value>A-K-Q-J mixed suit</value>
+  </data>
+  <data name="LineOne_10" xml:space="preserve">
+    <value>2 suited high cards</value>
+  </data>
+  <data name="LineOne_11" xml:space="preserve">
+    <value>3 card Straight Flush</value>
+  </data>
+  <data name="LineOne_12" xml:space="preserve">
+    <value>K-Q-J mixed suit</value>
+  </data>
+  <data name="LineOne_13" xml:space="preserve">
+    <value>2 high cards</value>
+  </data>
+  <data name="LineOne_14" xml:space="preserve">
+    <value>1 high card</value>
+  </data>
+  <data name="LineOne_15" xml:space="preserve">
+    <value>3 suited cards</value>
+  </data>
+  <data name="LineTwo_01" xml:space="preserve">
+    <value>Even if you have King high Straight Flush, take the payout!</value>
+  </data>
+  <data name="LineTwo_02" xml:space="preserve">
+    <value>This is a no brainer, hold on to them and take the payout!</value>
+  </data>
+  <data name="LineTwo_03" xml:space="preserve">
+    <value>Go for Royal Flush even if you have a natural Flush or Straight.</value>
+  </data>
+  <data name="LineTwo_04" xml:space="preserve">
+    <value>Keep natural flushes and straights and don't split a pair.</value>
+  </data>
+  <data name="LineTwo_05" xml:space="preserve">
+    <value>You can win with flush, straight, and straight flush.</value>
+  </data>
+  <data name="LineTwo_06" xml:space="preserve">
+    <value>Keep the high pair to at least win your bet back.</value>
+  </data>
+  <data name="LineTwo_07" xml:space="preserve">
+    <value>This includes the 10 if it matches suit.</value>
+  </data>
+  <data name="LineTwo_08" xml:space="preserve">
+    <value>19% chance to hit the Flush.</value>
+  </data>
+  <data name="LineTwo_09" xml:space="preserve">
+    <value>Any card 10 or higher and you win.</value>
+  </data>
+  <data name="LineTwo_10" xml:space="preserve">
+    <value>This is better than holding 3 high cards of mixed suit.</value>
+  </data>
+  <data name="LineTwo_11" xml:space="preserve">
+    <value>Must be consecutive numbers of same suit (example: 6-7-8).</value>
+  </data>
+  <data name="LineTwo_12" xml:space="preserve">
+    <value>Chance of high pair and a outside Straight draw.</value>
+  </data>
+  <data name="LineTwo_13" xml:space="preserve">
+    <value>2 high cards are better than holding on to 1 high card.</value>
+  </data>
+  <data name="LineTwo_14" xml:space="preserve">
+    <value>Statistically better than drawing 5 new cards.</value>
+  </data>
+  <data name="LineTwo_15" xml:space="preserve">
+    <value>If you have no high cards, this is better than discarding everything.</value>
+  </data>
+  <data name="StrategyImage_01" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StrategyImage_02" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StrategyImage_03" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StrategyImage_04" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StrategyImage_05" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StrategyImage_06" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StrategyImage_07" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StrategyImage_08" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StrategyImage_09" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StrategyImage_10" xml:space="preserve">
+    <value />
+  </data>
+</root>

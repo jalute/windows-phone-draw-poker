@@ -1,0 +1,62 @@
+﻿<phone:PhoneApplicationPage xmlns:my="clr-namespace:DrawPokerBasic"  
+    x:Class="DrawPokerBasic.Options"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Video Poker" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Options" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <CheckBox Content="Sound" Height="99" HorizontalAlignment="Left" Margin="124,70,0,0" Name="chkSoundOn" VerticalAlignment="Top" FontSize="32" Width="202" />
+            <CheckBox Content="Hint Mode" FontSize="32" Height="99" HorizontalAlignment="Left" Margin="124,243,0,0" Name="chkHintMode" VerticalAlignment="Top" Width="245" Checked="chkHintMode_Checked" />
+            <TextBlock Height="56" HorizontalAlignment="Left" Margin="50,34,0,0" Name="textBlock1" Text="Uncheck if you want to mute this game from making sounds." TextWrapping="Wrap" VerticalAlignment="Top" Width="366" TextAlignment="Center" />
+            <TextBlock Height="75" HorizontalAlignment="Left" Margin="50,202,0,0" Name="textBlock2" Text="A blue line will appear under the cards for you to hold for &quot;perfect play&quot; poker." TextWrapping="Wrap" VerticalAlignment="Top" Width="366" />
+            <Path Data="M29,499 L82,499" Fill="#FF1BA1E2" Height="5" HorizontalAlignment="Left" Margin="67.143,0,0,374.857" Name="lineHint1" Stretch="Fill" Stroke="#FF1BA1E2" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Bottom" Width="39.714" />
+            <RadioButton Height="170" HorizontalAlignment="Left" Margin="50,420,0,0" Name="radDefaultDeck" VerticalAlignment="Top" GroupName="Decks" IsChecked="True" Width="165" Checked="radDefaultDeck_checked">
+                <Viewbox>
+                    <my:ucCard x:Name="crdDefaultCard" Click="card_click" />
+                </Viewbox>                
+            </RadioButton>
+            <RadioButton Height="170" HorizontalAlignment="Left" Margin="219,420,0,0" Name="radSexyDeck" VerticalAlignment="Top" GroupName="Decks" Width="165" Checked="radSexyDeck_checked">
+                <Viewbox>
+                    <my:ucCard x:Name="crdSexyCard" Click="card_click" />
+                </Viewbox>
+            </RadioButton>
+            <TextBlock Height="44" HorizontalAlignment="Left" Margin="41,372,0,0" Name="textBlock3" Text="Choose which deck you want to play with:" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" />
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

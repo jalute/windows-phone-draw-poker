@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoPokerBasic", "DrawPokerBasic\VideoPokerBasic.csproj", "{D4DCFD1A-8C44-453C-9EA4-33C07EEC894E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawPokerLibrary", "..\DrawPokerTrainer\DrawPokerLibrary\DrawPokerLibrary.csproj", "{87611FE0-BAE4-4749-89C9-30A2D4833722}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DrawPokerBasic\\VideoPokerBasic.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = DrawPokerBasic\\
+		SccProjectUniqueName2 = ..\\DrawPokerTrainer\\DrawPokerLibrary\\DrawPokerLibrary.csproj
+		SccProjectName2 = \u0022$/DrawPokerTrainer/DrawPokerTrainer/DrawPokerLibrary\u0022,\u0020XRAAAAAA
+		SccLocalPath2 = ..\\DrawPokerTrainer\\DrawPokerLibrary
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4DCFD1A-8C44-453C-9EA4-33C07EEC894E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4DCFD1A-8C44-453C-9EA4-33C07EEC894E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4DCFD1A-8C44-453C-9EA4-33C07EEC894E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D4DCFD1A-8C44-453C-9EA4-33C07EEC894E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4DCFD1A-8C44-453C-9EA4-33C07EEC894E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4DCFD1A-8C44-453C-9EA4-33C07EEC894E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{87611FE0-BAE4-4749-89C9-30A2D4833722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87611FE0-BAE4-4749-89C9-30A2D4833722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87611FE0-BAE4-4749-89C9-30A2D4833722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87611FE0-BAE4-4749-89C9-30A2D4833722}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
