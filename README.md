@@ -13,9 +13,9 @@ DrawPokerBasic/                    --> Main project folder
   Images/                          --> All graphics and background images for project
   Properties/                      --> Property settings for project
   Resources/                       --> For future languages (not used)
-  SampleData/                      --> Data Source for vegas payout table
+  SampleData/                      --> Data Source for base phone template (not used)
   Sounds/                          --> Location of all wav files used in project
-  ViewModels/                      --> Part of the base windows phone template
+  ViewModels/                      --> Part of the base windows phone template (not used?)
 
 ```
 ## Disclaimer
